@@ -1,0 +1,11 @@
+---
+applications:
+  - name: demo
+    env:
+      SPRING_PROFILES_ACTIVE: mysql,cloud
+    memory: 1G
+    path : target\gs-mysql-data-0.1.0.jar
+    instances: 1
+    random-route: true
+    buildpacks:
+      - https://github.com/cloudfoundry/java-buildpack.git
